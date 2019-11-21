@@ -20,15 +20,22 @@ $config = [
         'authClientCollection' => [
             'class' => 'yii\authclient\Collection',
             'clients' => [
+                'yandex' => [
+                    'class' => 'yii\authclient\clients\Yandex',
+                    'clientId' => '36c6f1c7997846a8810525c5cf907b6d',
+                    'clientSecret' => '463bf8b3816e41828b5391a606443485',
+                ],
                 'google' => [
                     'class' => 'yii\authclient\clients\Google',
-                    'clientId' => '699664904170-nek402jh696is8o51crgrfe3rkudnm5u.apps.googleusercontent.com',
-                    'clientSecret' => '8t_Xc89PqA1OdwoXNrP3E5kW',
+                    'clientId' => '699664904170-iu7pbrsvcskcjr3c0ugct2ocm6lj4rv7.apps.googleusercontent.com',
+                    'clientSecret' => 's16fCedQpws5mgHgigLX7m57',
+                    'returnUrl' => 'http://social.innovation-lab.ltd/web/user/security/auth?authclient=google',
+
                 ],
                 'facebook' => [
                     'class' => 'yii\authclient\clients\Facebook',
-                    'clientId' => 'facebook_client_id',
-                    'clientSecret' => 'facebook_client_secret',
+                    'clientId' => '566550994092791',
+                    'clientSecret' => 'b86a101a21d7d45c8b0d3c1c112a7840',
                 ],
                 'vkontakte' => [
                     'class'        => 'yii\authclient\clients\VKontakte',
@@ -70,14 +77,14 @@ $config = [
             ],
         ],
         'db' => $db,
-        /*
+
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
             ],
         ],
-        */
+
     ],
     'params' => $params,
 ];
